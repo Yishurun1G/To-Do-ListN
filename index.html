@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- Declares the document type and version of HTML (HTML5) -->
+<html lang="en">
+<!-- The root element of the HTML document, with language set to English -->
+
+<head>
+    <!-- The head section contains meta-information about the document -->
+    <meta charset="UTF-8">
+    <!-- Specifies the character encoding for the document (UTF-8) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ensures the page is responsive and scales properly on all devices -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Links the external CSS file (style.css) to style the document -->
+    <title>To-Do List</title>
+    <!-- Sets the title of the webpage, which appears in the browser tab -->
+</head>
+
+<body>
+    <!-- The body section contains the visible content of the webpage -->
+    <div class="container">
+        <!-- A container div to wrap the entire to-do app content -->
+        <div class="todo-app">
+            <!-- A div specifically for the to-do app section -->
+            <h2>To-Do List <img src="images/icon.png"></h2>
+            <!-- Heading for the to-do list, with an icon image -->
+            <div class="row">
+                <!-- A row div to organize the input and button horizontally -->
+                <input type="text" id="input-box" placeholder="Add your task">
+                <!-- Input field for users to type their tasks -->
+                <button onclick="addTask()">Add</button>
+                <!-- Button to trigger the addTask() function when clicked -->
+            </div>
+            <ul id="list-container">
+                <!-- Unordered list to display the to-do tasks -->
+                <!-- Example tasks (commented out for now):
+                <li class="checked">Task 1</li>
+                <li>Task 2</li>
+                <li>Task 3</li> -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="ToDo.js"></script>
+    <!-- Links the external JavaScript file (ToDo.js) for interactivity -->
+</body>
+
+</html>
