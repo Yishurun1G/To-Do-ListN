@@ -1,0 +1,125 @@
+/* Universal selector to reset margin, padding, and set default font and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', 'sans-serif'; /* Sets the default font family */
+    box-sizing: border-box; /* Ensures padding and border are included in element dimensions */
+}
+
+/* Styles for the main container of the app */
+.container {
+    width: 100%; /* Full width */
+    min-height: 100vh; /* Minimum height of the viewport */
+    background: linear-gradient(135deg, #153677, #4e085f); /* Gradient background */
+    padding: 10px; /* Adds padding around the container */
+}
+
+/* Styles for the to-do app section */
+.todo-app {
+    width: 100%; /* Full width */
+    max-width: 540px; /* Maximum width of the to-do app */
+    background: #fff; /* White background */
+    margin: 100px auto 20px; /* Centers the app with top margin and adds bottom margin */
+    padding: 40px 30px 70px; /* Adds padding inside the app */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Styles for the heading inside the to-do app */
+.todo-app h2 {
+    color: #002765; /* Dark blue color for the heading */
+    display: flex; /* Flexbox to align items horizontally */
+    align-items: center; /* Vertically centers the icon with the text */
+    margin-bottom: 20px; /* Adds bottom margin */
+}
+
+/* Styles for the icon inside the heading */
+.todo-app h2 img {
+    width: 30px; /* Sets the width of the icon */
+    margin-left: 10px; /* Adds left margin to the icon */
+}
+
+/* Styles for the row containing the input and button */
+.row {
+    display: flex; /* Flexbox to align items horizontally */
+    align-items: center; /* Vertically centers the input and button */
+    justify-content: space-between; /* Spaces the input and button apart */
+    background: #edeef0; /* Light gray background */
+    border-radius: 30px; /* Rounded corners */
+    padding-left: 20px; /* Adds left padding */
+    margin-bottom: 25px; /* Adds bottom margin */
+}
+
+/* Styles for the input field */
+input {
+    flex: 1; /* Takes up remaining space in the row */
+    border: none; /* Removes border */
+    outline: none; /* Removes outline */
+    background: transparent; /* Transparent background */
+    padding: 10px; /* Adds padding inside the input */
+}
+
+/* Styles for the button */
+button {
+    border: none; /* Removes border */
+    outline: none; /* Removes outline */
+    padding: 16px 50px; /* Adds padding inside the button */
+    background: #ff5945; /* Red background color */
+    color: #fff; /* White text color */
+    font-size: 16px; /* Sets font size */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    border-radius: 40px; /* Rounded corners */
+}
+
+/* Styles for list items */
+ul li {
+    list-style: none; /* Removes default list styling */
+    font-size: 17px; /* Sets font size */
+    padding: 12px 8px 12px 50px; /* Adds padding */
+    user-select: none; /* Prevents text selection */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    position: relative; /* Enables positioning of child elements */
+}
+
+/* Styles for the custom checkbox (before pseudo-element) */
+ul li::before {
+    content: ''; /* Empty content */
+    position: absolute; /* Positions the checkbox absolutely */
+    height: 28px; /* Sets height */
+    width: 28px; /* Sets width */
+    border-radius: 50%; /* Makes it circular */
+    background-image: url(images/unchecked.png); /* Unchecked checkbox image */
+    background-size: cover; /* Ensures the image covers the area */
+    background-position: center; /* Centers the image */
+    top: 12px; /* Positions from the top */
+    left: 8px; /* Positions from the left */
+}
+
+/* Styles for checked list items */
+ul li.checked {
+    color: #555; /* Gray color for checked items */
+    text-decoration: line-through; /* Adds a line-through effect */
+}
+
+/* Styles for the custom checkbox when the item is checked */
+ul li.checked::before {
+    background-image: url(images/checked.png); /* Checked checkbox image */
+}
+
+/* Styles for the delete button (span) inside list items */
+ul li span {
+    position: absolute; /* Positions the delete button absolutely */
+    right: 0; /* Positions from the right */
+    top: 5px; /* Positions from the top */
+    width: 40px; /* Sets width */
+    height: 40px; /* Sets height */
+    font-size: 22px; /* Sets font size */
+    color: #555; /* Gray color */
+    line-height: 40px; /* Centers text vertically */
+    text-align: center; /* Centers text horizontally */
+    border-radius: 40%; /* Rounded corners */
+}
+
+/* Hover effect for the delete button */
+ul li span:hover {
+    background-color: #edeef0; /* Light gray background on hover */
+}
